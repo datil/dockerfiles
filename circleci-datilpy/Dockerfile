@@ -5,6 +5,7 @@ ENV CIRCLE_TEST_REPORTS=/tmp/circleci-test-results
 
 RUN sudo apt-get update
 RUN sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+RUN sudo apt install python3-pip
 RUN sudo apt-get install -y postgresql-client || true
 RUN mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
 RUN sudo wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
